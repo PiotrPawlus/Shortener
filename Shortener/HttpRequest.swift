@@ -35,6 +35,29 @@ class HttpRequest {
         
         print(url)
 
+        let request: NSURLRequest = NSURLRequest(URL: url)
+        var response: NSURLResponse?
+        
+        do {
+            let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
+        
+            
+            print("-------------RESPONSE------------")
+            if let httpResponse = response as? NSHTTPURLResponse {
+                print(httpResponse)
+            }
+    
+            let responseString = NSString(data: data, encoding: NSASCIIStringEncoding)
+            print(responseString)
+            
+            let res = responseString as! String
+            print("-------------res------------")
+            print(res)
+        } catch let err as NSError {
+            print("Error \(err), \(err.userInfo)")
+        }
+        
+
         
         return "SHORT URL"
     }
