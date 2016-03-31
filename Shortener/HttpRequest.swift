@@ -30,34 +30,22 @@ class HttpRequest {
     }
     
     private func getShortURL(link: String) -> String? {
-        let postEndPoint: String = "https://to.ly/api.php?longurl=\(link)"
-        let url = NSURL(string: postEndPoint)!
+        let urlString: String = "https://to.ly/api.php?longurl=\(link)"
+        let session = NSURLSession.sharedSession()
+        let url = NSURL(string: urlString)
         
-        print(url)
-
-        let request: NSURLRequest = NSURLRequest(URL: url)
-        var response: NSURLResponse?
-        
-        do {
-            let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
-        
+        let task = session.dataTaskWithURL(url!) {
+            (data: NSData?, response: NSURLResponse?, error: NSError?) in
             
-            print("-------------RESPONSE------------")
-            if let httpResponse = response as? NSHTTPURLResponse {
-                print(httpResponse)
+            if error != nil {
+                print(error?.localizedDescription)
+            } else {
+                let responseString = NSString(data: data!, encoding: NSASCIIStringEncoding)
+                let response = responseString as! String
+                print(response)
             }
-    
-            let responseString = NSString(data: data, encoding: NSASCIIStringEncoding)
-            print(responseString)
-            
-            let res = responseString as! String
-            print("-------------res------------")
-            print(res)
-        } catch let err as NSError {
-            print("Error \(err), \(err.userInfo)")
         }
-        
-
+        task.resume()
         
         return "SHORT URL"
     }
