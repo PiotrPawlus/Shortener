@@ -11,7 +11,6 @@ import CoreData
 
 public protocol FetchLinkProtocol {
     var managedObjectContext: NSManagedObjectContext? { get }
-    weak var tableView: UITableView! { get set }
     
     func fetch()
 }
