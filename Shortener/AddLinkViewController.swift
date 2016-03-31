@@ -41,7 +41,20 @@ class AddLinkViewController: UIViewController, AddLinkProtocol {
         }
     }
 
-    func pushLink(link: String) {
+    func pushLink(link: String, shortLink: String) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        managedObjectContext = appDelegate.managedObjectContext
         
+        let entity = NSEntityDescription.entityForName("HTTPAddress", inManagedObjectContext: managedObjectContext!)!
+        let address = HTTPAddress(entity: entity, insertIntoManagedObjectContext: managedObjectContext!)
+        
+        address.httpAddress = link
+        address.shortHttpAddress = shortLink
+    
+        do {
+            try managedObjectContext?.save()
+        } catch let err as NSError {
+            print("Could not save \(err), \(err.userInfo)")
+        }
     }
 }
