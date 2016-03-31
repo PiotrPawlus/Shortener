@@ -53,6 +53,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addLink:" destination="ff1-H6-uTI" eventType="touchUpInside" id="Pal-hS-bI3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -68,6 +71,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="PG5-Vr-LMx"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="linkTextField" destination="5m5-l5-YS8" id="wyC-is-Eyp"/>
                         <outlet property="menuBarButton" destination="PG5-Vr-LMx" id="AuE-0T-1oU"/>
                     </connections>
                 </viewController>

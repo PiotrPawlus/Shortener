@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import CoreData
 
-class AddLinkViewController: UIViewController {
+class AddLinkViewController: UIViewController, AddLinkProtocol {
+    
+    var managedObjectContext: NSManagedObjectContext?
     
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
+    
+    @IBOutlet weak var linkTextField: UITextField!
+    @IBOutlet weak var addButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,18 +31,17 @@ class AddLinkViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func addLink(sender: AnyObject) {
+        if let link = linkTextField.text {
+            print("Add Link: \(link)")            
+        }
     }
-    */
 
+    func pushLink(link: String) {
+        
+    }
 }
