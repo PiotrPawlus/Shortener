@@ -770,6 +770,7 @@ const int FrontViewPositionNone = 0xff;
 }
 
 
+
 #pragma mark - Public methods and property accessors
 
 - (void)setFrontViewController:(UIViewController *)frontViewController

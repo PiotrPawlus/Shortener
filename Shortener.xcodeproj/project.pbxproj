@@ -15,6 +15,9 @@
 		C10DCB311CAD404500C9B0C4 /* ShortenerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB301CAD404500C9B0C4 /* ShortenerTests.swift */; };
 		C10DCB3C1CAD404500C9B0C4 /* ShortenerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB3B1CAD404500C9B0C4 /* ShortenerUITests.swift */; };
 		C10DCB4D1CAD423500C9B0C4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB4C1CAD423500C9B0C4 /* SWRevealViewController.m */; };
+		C10DCB4F1CAD468B00C9B0C4 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB4E1CAD468B00C9B0C4 /* MenuTableViewController.swift */; };
+		C10DCB511CAD46BE00C9B0C4 /* LinksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB501CAD46BE00C9B0C4 /* LinksTableViewController.swift */; };
+		C10DCB531CAD46DC00C9B0C4 /* AddLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB521CAD46DC00C9B0C4 /* AddLinkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		C10DCB4A1CAD423400C9B0C4 /* Shortener-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shortener-Bridging-Header.h"; sourceTree = "<group>"; };
 		C10DCB4B1CAD423500C9B0C4 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		C10DCB4C1CAD423500C9B0C4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		C10DCB4E1CAD468B00C9B0C4 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		C10DCB501CAD46BE00C9B0C4 /* LinksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksTableViewController.swift; sourceTree = "<group>"; };
+		C10DCB521CAD46DC00C9B0C4 /* AddLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLinkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 			children = (
 				C10DCB181CAD404500C9B0C4 /* AppDelegate.swift */,
 				C10DCB1C1CAD404500C9B0C4 /* Main.storyboard */,
+				C10DCB4E1CAD468B00C9B0C4 /* MenuTableViewController.swift */,
+				C10DCB501CAD46BE00C9B0C4 /* LinksTableViewController.swift */,
+				C10DCB521CAD46DC00C9B0C4 /* AddLinkViewController.swift */,
 				C10DCB221CAD404500C9B0C4 /* Assets.xcassets */,
 				C10DCB491CAD420C00C9B0C4 /* SWRevealController */,
 				C10DCB241CAD404500C9B0C4 /* LaunchScreen.storyboard */,
@@ -271,6 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C10DCB531CAD46DC00C9B0C4 /* AddLinkViewController.swift in Sources */,
+				C10DCB4F1CAD468B00C9B0C4 /* MenuTableViewController.swift in Sources */,
+				C10DCB511CAD46BE00C9B0C4 /* LinksTableViewController.swift in Sources */,
 				C10DCB211CAD404500C9B0C4 /* Shortener.xcdatamodeld in Sources */,
 				C10DCB191CAD404500C9B0C4 /* AppDelegate.swift in Sources */,
 				C10DCB4D1CAD423500C9B0C4 /* SWRevealViewController.m in Sources */,
