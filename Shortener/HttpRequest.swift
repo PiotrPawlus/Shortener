@@ -18,18 +18,24 @@ class HttpRequest {
         if link.hasPrefix("http://") || link.hasPrefix("https://") {
             url = link.lowercaseString
         } else {
-            url = "http://\(link.lowercaseString)"
+            url = "https://\(link.lowercaseString)"
         }
         if verifyURL(url) {
-            return (url, getShortURL(url))
+            guard let shortURL = getShortURL(url) else { return nil }
+            return (url, shortURL)
         } else {
             return nil
         }
 
     }
     
-    private func getShortURL(link: String) -> String {
+    private func getShortURL(link: String) -> String? {
+        let postEndPoint: String = "https://to.ly/api.php?longurl=\(link)"
+        let url = NSURL(string: postEndPoint)!
+        
+        print(url)
 
+        
         return "SHORT URL"
     }
     
