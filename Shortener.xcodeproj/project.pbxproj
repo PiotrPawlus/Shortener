@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C10DCB191CAD404500C9B0C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB181CAD404500C9B0C4 /* AppDelegate.swift */; };
+		C10DCB1B1CAD404500C9B0C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB1A1CAD404500C9B0C4 /* ViewController.swift */; };
+		C10DCB1E1CAD404500C9B0C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10DCB1C1CAD404500C9B0C4 /* Main.storyboard */; };
+		C10DCB211CAD404500C9B0C4 /* Shortener.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB1F1CAD404500C9B0C4 /* Shortener.xcdatamodeld */; };
+		C10DCB231CAD404500C9B0C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C10DCB221CAD404500C9B0C4 /* Assets.xcassets */; };
+		C10DCB261CAD404500C9B0C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10DCB241CAD404500C9B0C4 /* LaunchScreen.storyboard */; };
+		C10DCB311CAD404500C9B0C4 /* ShortenerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB301CAD404500C9B0C4 /* ShortenerTests.swift */; };
+		C10DCB3C1CAD404500C9B0C4 /* ShortenerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB3B1CAD404500C9B0C4 /* ShortenerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C10DCB2D1CAD404500C9B0C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C10DCB0D1CAD404500C9B0C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C10DCB141CAD404500C9B0C4;
+			remoteInfo = Shortener;
+		};
+		C10DCB381CAD404500C9B0C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C10DCB0D1CAD404500C9B0C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C10DCB141CAD404500C9B0C4;
+			remoteInfo = Shortener;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C10DCB151CAD404500C9B0C4 /* Shortener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shortener.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C10DCB181CAD404500C9B0C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C10DCB1A1CAD404500C9B0C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C10DCB1D1CAD404500C9B0C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C10DCB201CAD404500C9B0C4 /* Shortener.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shortener.xcdatamodel; sourceTree = "<group>"; };
+		C10DCB221CAD404500C9B0C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C10DCB251CAD404500C9B0C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C10DCB271CAD404500C9B0C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C10DCB2C1CAD404500C9B0C4 /* ShortenerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShortenerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C10DCB301CAD404500C9B0C4 /* ShortenerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortenerTests.swift; sourceTree = "<group>"; };
+		C10DCB321CAD404500C9B0C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C10DCB371CAD404500C9B0C4 /* ShortenerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShortenerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C10DCB3B1CAD404500C9B0C4 /* ShortenerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortenerUITests.swift; sourceTree = "<group>"; };
+		C10DCB3D1CAD404500C9B0C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C10DCB121CAD404500C9B0C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C10DCB291CAD404500C9B0C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C10DCB341CAD404500C9B0C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C10DCB0C1CAD404500C9B0C4 = {
+			isa = PBXGroup;
+			children = (
+				C10DCB171CAD404500C9B0C4 /* Shortener */,
+				C10DCB2F1CAD404500C9B0C4 /* ShortenerTests */,
+				C10DCB3A1CAD404500C9B0C4 /* ShortenerUITests */,
+				C10DCB161CAD404500C9B0C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C10DCB161CAD404500C9B0C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C10DCB151CAD404500C9B0C4 /* Shortener.app */,
+				C10DCB2C1CAD404500C9B0C4 /* ShortenerTests.xctest */,
+				C10DCB371CAD404500C9B0C4 /* ShortenerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C10DCB171CAD404500C9B0C4 /* Shortener */ = {
+			isa = PBXGroup;
+			children = (
+				C10DCB181CAD404500C9B0C4 /* AppDelegate.swift */,
+				C10DCB1A1CAD404500C9B0C4 /* ViewController.swift */,
+				C10DCB1C1CAD404500C9B0C4 /* Main.storyboard */,
+				C10DCB221CAD404500C9B0C4 /* Assets.xcassets */,
+				C10DCB241CAD404500C9B0C4 /* LaunchScreen.storyboard */,
+				C10DCB271CAD404500C9B0C4 /* Info.plist */,
+				C10DCB1F1CAD404500C9B0C4 /* Shortener.xcdatamodeld */,
+			);
+			path = Shortener;
+			sourceTree = "<group>";
+		};
+		C10DCB2F1CAD404500C9B0C4 /* ShortenerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C10DCB301CAD404500C9B0C4 /* ShortenerTests.swift */,
+				C10DCB321CAD404500C9B0C4 /* Info.plist */,
+			);
+			path = ShortenerTests;
+			sourceTree = "<group>";
+		};
+		C10DCB3A1CAD404500C9B0C4 /* ShortenerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C10DCB3B1CAD404500C9B0C4 /* ShortenerUITests.swift */,
+				C10DCB3D1CAD404500C9B0C4 /* Info.plist */,
+			);
+			path = ShortenerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C10DCB141CAD404500C9B0C4 /* Shortener */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C10DCB401CAD404500C9B0C4 /* Build configuration list for PBXNativeTarget "Shortener" */;
+			buildPhases = (
+				C10DCB111CAD404500C9B0C4 /* Sources */,
+				C10DCB121CAD404500C9B0C4 /* Frameworks */,
+				C10DCB131CAD404500C9B0C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shortener;
+			productName = Shortener;
+			productReference = C10DCB151CAD404500C9B0C4 /* Shortener.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C10DCB2B1CAD404500C9B0C4 /* ShortenerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C10DCB431CAD404500C9B0C4 /* Build configuration list for PBXNativeTarget "ShortenerTests" */;
+			buildPhases = (
+				C10DCB281CAD404500C9B0C4 /* Sources */,
+				C10DCB291CAD404500C9B0C4 /* Frameworks */,
+				C10DCB2A1CAD404500C9B0C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C10DCB2E1CAD404500C9B0C4 /* PBXTargetDependency */,
+			);
+			name = ShortenerTests;
+			productName = ShortenerTests;
+			productReference = C10DCB2C1CAD404500C9B0C4 /* ShortenerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C10DCB361CAD404500C9B0C4 /* ShortenerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C10DCB461CAD404500C9B0C4 /* Build configuration list for PBXNativeTarget "ShortenerUITests" */;
+			buildPhases = (
+				C10DCB331CAD404500C9B0C4 /* Sources */,
+				C10DCB341CAD404500C9B0C4 /* Frameworks */,
+				C10DCB351CAD404500C9B0C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C10DCB391CAD404500C9B0C4 /* PBXTargetDependency */,
+			);
+			name = ShortenerUITests;
+			productName = ShortenerUITests;
+			productReference = C10DCB371CAD404500C9B0C4 /* ShortenerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C10DCB0D1CAD404500C9B0C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Piotr Pawluś";
+				TargetAttributes = {
+					C10DCB141CAD404500C9B0C4 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					C10DCB2B1CAD404500C9B0C4 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = C10DCB141CAD404500C9B0C4;
+					};
+					C10DCB361CAD404500C9B0C4 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = C10DCB141CAD404500C9B0C4;
+					};
+				};
+			};
+			buildConfigurationList = C10DCB101CAD404500C9B0C4 /* Build configuration list for PBXProject "Shortener" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C10DCB0C1CAD404500C9B0C4;
+			productRefGroup = C10DCB161CAD404500C9B0C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C10DCB141CAD404500C9B0C4 /* Shortener */,
+				C10DCB2B1CAD404500C9B0C4 /* ShortenerTests */,
+				C10DCB361CAD404500C9B0C4 /* ShortenerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C10DCB131CAD404500C9B0C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C10DCB261CAD404500C9B0C4 /* LaunchScreen.storyboard in Resources */,
+				C10DCB231CAD404500C9B0C4 /* Assets.xcassets in Resources */,
+				C10DCB1E1CAD404500C9B0C4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C10DCB2A1CAD404500C9B0C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C10DCB351CAD404500C9B0C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C10DCB111CAD404500C9B0C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C10DCB1B1CAD404500C9B0C4 /* ViewController.swift in Sources */,
+				C10DCB211CAD404500C9B0C4 /* Shortener.xcdatamodeld in Sources */,
+				C10DCB191CAD404500C9B0C4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C10DCB281CAD404500C9B0C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C10DCB311CAD404500C9B0C4 /* ShortenerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C10DCB331CAD404500C9B0C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C10DCB3C1CAD404500C9B0C4 /* ShortenerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C10DCB2E1CAD404500C9B0C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C10DCB141CAD404500C9B0C4 /* Shortener */;
+			targetProxy = C10DCB2D1CAD404500C9B0C4 /* PBXContainerItemProxy */;
+		};
+		C10DCB391CAD404500C9B0C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C10DCB141CAD404500C9B0C4 /* Shortener */;
+			targetProxy = C10DCB381CAD404500C9B0C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C10DCB1C1CAD404500C9B0C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C10DCB1D1CAD404500C9B0C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C10DCB241CAD404500C9B0C4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C10DCB251CAD404500C9B0C4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C10DCB3E1CAD404500C9B0C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C10DCB3F1CAD404500C9B0C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C10DCB411CAD404500C9B0C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Shortener/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piotr.pawlus.Shortener;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C10DCB421CAD404500C9B0C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Shortener/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piotr.pawlus.Shortener;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C10DCB441CAD404500C9B0C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ShortenerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piotr.pawlus.ShortenerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shortener.app/Shortener";
+			};
+			name = Debug;
+		};
+		C10DCB451CAD404500C9B0C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ShortenerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piotr.pawlus.ShortenerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shortener.app/Shortener";
+			};
+			name = Release;
+		};
+		C10DCB471CAD404500C9B0C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ShortenerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piotr.pawlus.ShortenerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Shortener;
+			};
+			name = Debug;
+		};
+		C10DCB481CAD404500C9B0C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ShortenerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = piotr.pawlus.ShortenerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Shortener;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C10DCB101CAD404500C9B0C4 /* Build configuration list for PBXProject "Shortener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C10DCB3E1CAD404500C9B0C4 /* Debug */,
+				C10DCB3F1CAD404500C9B0C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C10DCB401CAD404500C9B0C4 /* Build configuration list for PBXNativeTarget "Shortener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C10DCB411CAD404500C9B0C4 /* Debug */,
+				C10DCB421CAD404500C9B0C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C10DCB431CAD404500C9B0C4 /* Build configuration list for PBXNativeTarget "ShortenerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C10DCB441CAD404500C9B0C4 /* Debug */,
+				C10DCB451CAD404500C9B0C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C10DCB461CAD404500C9B0C4 /* Build configuration list for PBXNativeTarget "ShortenerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C10DCB471CAD404500C9B0C4 /* Debug */,
+				C10DCB481CAD404500C9B0C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C10DCB1F1CAD404500C9B0C4 /* Shortener.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C10DCB201CAD404500C9B0C4 /* Shortener.xcdatamodel */,
+			);
+			currentVersion = C10DCB201CAD404500C9B0C4 /* Shortener.xcdatamodel */;
+			path = Shortener.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C10DCB0D1CAD404500C9B0C4 /* Project object */;
+}
