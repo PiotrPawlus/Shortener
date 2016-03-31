@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 
-class Shortener: NSManagedObject {
+class HTTPAddress: NSManagedObject {
 
     @NSManaged var httpAddress: String
     @NSManaged var shortHttpAddress: String

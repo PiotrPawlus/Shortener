@@ -20,7 +20,7 @@
 		C10DCB531CAD46DC00C9B0C4 /* AddLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB521CAD46DC00C9B0C4 /* AddLinkViewController.swift */; };
 		C10DCB561CAD4A3600C9B0C4 /* AddLinkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB551CAD4A3600C9B0C4 /* AddLinkProtocol.swift */; };
 		C10DCB591CAD4AD300C9B0C4 /* FetchLinksProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB581CAD4AD300C9B0C4 /* FetchLinksProtocol.swift */; };
-		C10DCB661CAD527C00C9B0C4 /* Shortener.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB651CAD527C00C9B0C4 /* Shortener.swift */; };
+		C10DCB661CAD527C00C9B0C4 /* HTTPAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB651CAD527C00C9B0C4 /* HTTPAddress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,7 @@
 		C10DCB521CAD46DC00C9B0C4 /* AddLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLinkViewController.swift; sourceTree = "<group>"; };
 		C10DCB551CAD4A3600C9B0C4 /* AddLinkProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLinkProtocol.swift; sourceTree = "<group>"; };
 		C10DCB581CAD4AD300C9B0C4 /* FetchLinksProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchLinksProtocol.swift; sourceTree = "<group>"; };
-		C10DCB651CAD527C00C9B0C4 /* Shortener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shortener.swift; sourceTree = "<group>"; };
+		C10DCB651CAD527C00C9B0C4 /* HTTPAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPAddress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +176,7 @@
 		C10DCB641CAD517F00C9B0C4 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				C10DCB651CAD527C00C9B0C4 /* Shortener.swift */,
+				C10DCB651CAD527C00C9B0C4 /* HTTPAddress.swift */,
 				C10DCB1F1CAD404500C9B0C4 /* Shortener.xcdatamodeld */,
 			);
 			name = CoreData;
@@ -313,7 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C10DCB661CAD527C00C9B0C4 /* Shortener.swift in Sources */,
+				C10DCB661CAD527C00C9B0C4 /* HTTPAddress.swift in Sources */,
 				C10DCB591CAD4AD300C9B0C4 /* FetchLinksProtocol.swift in Sources */,
 				C10DCB531CAD46DC00C9B0C4 /* AddLinkViewController.swift in Sources */,
 				C10DCB4F1CAD468B00C9B0C4 /* MenuTableViewController.swift in Sources */,
