@@ -21,6 +21,7 @@
 		C10DCB561CAD4A3600C9B0C4 /* AddLinkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB551CAD4A3600C9B0C4 /* AddLinkProtocol.swift */; };
 		C10DCB591CAD4AD300C9B0C4 /* FetchLinksProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB581CAD4AD300C9B0C4 /* FetchLinksProtocol.swift */; };
 		C10DCB681CAD5B3B00C9B0C4 /* HTTPAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB671CAD5B3B00C9B0C4 /* HTTPAddress.swift */; };
+		C10DCB6A1CAD7D9A00C9B0C4 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB691CAD7D9A00C9B0C4 /* HttpRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		C10DCB551CAD4A3600C9B0C4 /* AddLinkProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLinkProtocol.swift; sourceTree = "<group>"; };
 		C10DCB581CAD4AD300C9B0C4 /* FetchLinksProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchLinksProtocol.swift; sourceTree = "<group>"; };
 		C10DCB671CAD5B3B00C9B0C4 /* HTTPAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPAddress.swift; sourceTree = "<group>"; };
+		C10DCB691CAD7D9A00C9B0C4 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +118,11 @@
 				C10DCB181CAD404500C9B0C4 /* AppDelegate.swift */,
 				C10DCB1C1CAD404500C9B0C4 /* Main.storyboard */,
 				C10DCB4E1CAD468B00C9B0C4 /* MenuTableViewController.swift */,
+				C10DCB691CAD7D9A00C9B0C4 /* HttpRequest.swift */,
 				C10DCB541CAD4A0D00C9B0C4 /* AddLink */,
 				C10DCB571CAD4AAB00C9B0C4 /* FetchLinks */,
-				C10DCB221CAD404500C9B0C4 /* Assets.xcassets */,
 				C10DCB641CAD517F00C9B0C4 /* CoreData */,
+				C10DCB221CAD404500C9B0C4 /* Assets.xcassets */,
 				C10DCB491CAD420C00C9B0C4 /* SWRevealController */,
 				C10DCB241CAD404500C9B0C4 /* LaunchScreen.storyboard */,
 				C10DCB271CAD404500C9B0C4 /* Info.plist */,
@@ -314,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C10DCB591CAD4AD300C9B0C4 /* FetchLinksProtocol.swift in Sources */,
+				C10DCB6A1CAD7D9A00C9B0C4 /* HttpRequest.swift in Sources */,
 				C10DCB531CAD46DC00C9B0C4 /* AddLinkViewController.swift in Sources */,
 				C10DCB4F1CAD468B00C9B0C4 /* MenuTableViewController.swift in Sources */,
 				C10DCB511CAD46BE00C9B0C4 /* LinksTableViewController.swift in Sources */,

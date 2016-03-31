@@ -12,6 +12,7 @@ import CoreData
 class AddLinkViewController: UIViewController, AddLinkProtocol {
     
     var managedObjectContext: NSManagedObjectContext?
+    var httpRequest: HttpRequest!
     
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     
@@ -22,6 +23,7 @@ class AddLinkViewController: UIViewController, AddLinkProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Shorten a link"
         if self.revealViewController() != nil {
             menuBarButton.target = self.revealViewController()
             menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -36,13 +38,12 @@ class AddLinkViewController: UIViewController, AddLinkProtocol {
 
     
     @IBAction func addLink(sender: AnyObject) {
-        guard let link = linkTextField.text else {
-            return
-        }
+        guard let link = linkTextField.text else { return }
         
-        pushLink(link, shortLink: "Short Link")
-
+        httpRequest = HttpRequest()
+        guard let (URL, shortURL) = httpRequest.getURL(link) else { return }
         
+        pushLink(URL, shortLink: shortURL)
     }
 
     func pushLink(link: String, shortLink: String) {
