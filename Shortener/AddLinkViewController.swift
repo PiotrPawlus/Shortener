@@ -36,9 +36,13 @@ class AddLinkViewController: UIViewController, AddLinkProtocol {
 
     
     @IBAction func addLink(sender: AnyObject) {
-        if let link = linkTextField.text {
-            print("Add Link: \(link)")            
+        guard let link = linkTextField.text else {
+            return
         }
+        
+        pushLink(link, shortLink: "Short Link")
+
+        
     }
 
     func pushLink(link: String, shortLink: String) {
@@ -50,7 +54,6 @@ class AddLinkViewController: UIViewController, AddLinkProtocol {
         
         address.httpAddress = link
         address.shortHttpAddress = shortLink
-    
         do {
             try managedObjectContext?.save()
         } catch let err as NSError {
