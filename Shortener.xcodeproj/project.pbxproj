@@ -20,6 +20,7 @@
 		C10DCB531CAD46DC00C9B0C4 /* AddLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB521CAD46DC00C9B0C4 /* AddLinkViewController.swift */; };
 		C10DCB561CAD4A3600C9B0C4 /* AddLinkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB551CAD4A3600C9B0C4 /* AddLinkProtocol.swift */; };
 		C10DCB591CAD4AD300C9B0C4 /* FetchLinksProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB581CAD4AD300C9B0C4 /* FetchLinksProtocol.swift */; };
+		C10DCB661CAD527C00C9B0C4 /* Shortener.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB651CAD527C00C9B0C4 /* Shortener.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		C10DCB521CAD46DC00C9B0C4 /* AddLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLinkViewController.swift; sourceTree = "<group>"; };
 		C10DCB551CAD4A3600C9B0C4 /* AddLinkProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLinkProtocol.swift; sourceTree = "<group>"; };
 		C10DCB581CAD4AD300C9B0C4 /* FetchLinksProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchLinksProtocol.swift; sourceTree = "<group>"; };
+		C10DCB651CAD527C00C9B0C4 /* Shortener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shortener.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,10 +119,10 @@
 				C10DCB541CAD4A0D00C9B0C4 /* AddLink */,
 				C10DCB571CAD4AAB00C9B0C4 /* FetchLinks */,
 				C10DCB221CAD404500C9B0C4 /* Assets.xcassets */,
+				C10DCB641CAD517F00C9B0C4 /* CoreData */,
 				C10DCB491CAD420C00C9B0C4 /* SWRevealController */,
 				C10DCB241CAD404500C9B0C4 /* LaunchScreen.storyboard */,
 				C10DCB271CAD404500C9B0C4 /* Info.plist */,
-				C10DCB1F1CAD404500C9B0C4 /* Shortener.xcdatamodeld */,
 			);
 			path = Shortener;
 			sourceTree = "<group>";
@@ -169,6 +171,15 @@
 				C10DCB581CAD4AD300C9B0C4 /* FetchLinksProtocol.swift */,
 			);
 			name = FetchLinks;
+			sourceTree = "<group>";
+		};
+		C10DCB641CAD517F00C9B0C4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C10DCB651CAD527C00C9B0C4 /* Shortener.swift */,
+				C10DCB1F1CAD404500C9B0C4 /* Shortener.xcdatamodeld */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C10DCB661CAD527C00C9B0C4 /* Shortener.swift in Sources */,
 				C10DCB591CAD4AD300C9B0C4 /* FetchLinksProtocol.swift in Sources */,
 				C10DCB531CAD46DC00C9B0C4 /* AddLinkViewController.swift in Sources */,
 				C10DCB4F1CAD468B00C9B0C4 /* MenuTableViewController.swift in Sources */,
