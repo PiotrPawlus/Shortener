@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C10DCB191CAD404500C9B0C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB181CAD404500C9B0C4 /* AppDelegate.swift */; };
-		C10DCB1B1CAD404500C9B0C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB1A1CAD404500C9B0C4 /* ViewController.swift */; };
 		C10DCB1E1CAD404500C9B0C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10DCB1C1CAD404500C9B0C4 /* Main.storyboard */; };
 		C10DCB211CAD404500C9B0C4 /* Shortener.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB1F1CAD404500C9B0C4 /* Shortener.xcdatamodeld */; };
 		C10DCB231CAD404500C9B0C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C10DCB221CAD404500C9B0C4 /* Assets.xcassets */; };
 		C10DCB261CAD404500C9B0C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10DCB241CAD404500C9B0C4 /* LaunchScreen.storyboard */; };
 		C10DCB311CAD404500C9B0C4 /* ShortenerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB301CAD404500C9B0C4 /* ShortenerTests.swift */; };
 		C10DCB3C1CAD404500C9B0C4 /* ShortenerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB3B1CAD404500C9B0C4 /* ShortenerUITests.swift */; };
+		C10DCB4D1CAD423500C9B0C4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB4C1CAD423500C9B0C4 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		C10DCB151CAD404500C9B0C4 /* Shortener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shortener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C10DCB181CAD404500C9B0C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C10DCB1A1CAD404500C9B0C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C10DCB1D1CAD404500C9B0C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C10DCB201CAD404500C9B0C4 /* Shortener.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shortener.xcdatamodel; sourceTree = "<group>"; };
 		C10DCB221CAD404500C9B0C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +48,9 @@
 		C10DCB371CAD404500C9B0C4 /* ShortenerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShortenerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C10DCB3B1CAD404500C9B0C4 /* ShortenerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortenerUITests.swift; sourceTree = "<group>"; };
 		C10DCB3D1CAD404500C9B0C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C10DCB4A1CAD423400C9B0C4 /* Shortener-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shortener-Bridging-Header.h"; sourceTree = "<group>"; };
+		C10DCB4B1CAD423500C9B0C4 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C10DCB4C1CAD423500C9B0C4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				C10DCB181CAD404500C9B0C4 /* AppDelegate.swift */,
-				C10DCB1A1CAD404500C9B0C4 /* ViewController.swift */,
 				C10DCB1C1CAD404500C9B0C4 /* Main.storyboard */,
 				C10DCB221CAD404500C9B0C4 /* Assets.xcassets */,
+				C10DCB491CAD420C00C9B0C4 /* SWRevealController */,
 				C10DCB241CAD404500C9B0C4 /* LaunchScreen.storyboard */,
 				C10DCB271CAD404500C9B0C4 /* Info.plist */,
 				C10DCB1F1CAD404500C9B0C4 /* Shortener.xcdatamodeld */,
@@ -126,6 +128,16 @@
 				C10DCB3D1CAD404500C9B0C4 /* Info.plist */,
 			);
 			path = ShortenerUITests;
+			sourceTree = "<group>";
+		};
+		C10DCB491CAD420C00C9B0C4 /* SWRevealController */ = {
+			isa = PBXGroup;
+			children = (
+				C10DCB4B1CAD423500C9B0C4 /* SWRevealViewController.h */,
+				C10DCB4C1CAD423500C9B0C4 /* SWRevealViewController.m */,
+				C10DCB4A1CAD423400C9B0C4 /* Shortener-Bridging-Header.h */,
+			);
+			name = SWRevealController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C10DCB1B1CAD404500C9B0C4 /* ViewController.swift in Sources */,
 				C10DCB211CAD404500C9B0C4 /* Shortener.xcdatamodeld in Sources */,
 				C10DCB191CAD404500C9B0C4 /* AppDelegate.swift in Sources */,
+				C10DCB4D1CAD423500C9B0C4 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,10 +415,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Shortener/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = piotr.pawlus.Shortener;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shortener/Shortener-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -414,10 +429,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Shortener/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = piotr.pawlus.Shortener;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shortener/Shortener-Bridging-Header.h";
 			};
 			name = Release;
 		};
