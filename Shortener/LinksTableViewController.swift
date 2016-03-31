@@ -10,14 +10,17 @@ import UIKit
 
 class LinksTableViewController: UITableViewController {
 
+    @IBOutlet weak var menuBarButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        if self.revealViewController() != nil {
+            menuBarButton.target = self.revealViewController()
+            menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {

@@ -67,6 +67,9 @@
                     <navigationItem key="navigationItem" id="8As-s1-ctY">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="PG5-Vr-LMx"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="menuBarButton" destination="PG5-Vr-LMx" id="AuE-0T-1oU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEN-r1-Omw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,7 +98,12 @@
                             <outlet property="delegate" destination="4yl-WG-WYY" id="fcr-pt-yXz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Fbe-V8-ANO"/>
+                    <navigationItem key="navigationItem" id="Fbe-V8-ANO">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Yt8-S4-Vek"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuBarButton" destination="Yt8-S4-Vek" id="oRJ-Oe-Cb3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rc9-Sj-c88" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -149,7 +157,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Ffz-Nu-aiS" kind="custom" trigger="accessoryAction" customClass="SWRevealViewControllerSeguePushController" id="uPi-3S-3Ko"/>
+                                            <segue destination="Ffz-Nu-aiS" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="o89-on-pra"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
