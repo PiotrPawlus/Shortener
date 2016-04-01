@@ -10,7 +10,7 @@ import UIKit
 
 class HttpRequest {
 
-    private let key = "AIzaSyD1WMV_kXlvt4tQSlv0KX3w8x6wlfZ8E_8"
+    private let key = "AIzaSyBHpgQDAJLTHYk8ItTx5bPmlZGPERoy5cQ"
     
     init() { }
 
@@ -32,41 +32,34 @@ class HttpRequest {
     }
     
     private func getShortURL(link: String) -> String? {
-//        let urlString: String = "https://to.ly/api.php?longurl=\(link)"
+        
+        let URLString: String = "https://www.googleapis.com/urlshortener/v1/url?key=\(key)"
+
 
         
-        let urlString: String = "https://www.googleapis.com/urlshortener/v1/url?key=\(key)"
-        let session = NSURLSession.sharedSession()
-        let url = NSURL(string: urlString)
+        let URL = URLString.stringByAddingPercentEncodingWithAllowedCharacters( NSCharacterSet.URLQueryAllowedCharacterSet())
+        let manager = AFHTTPSessionManager(sessionConfiguration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        let params = ["longURL" : "http://whoishiring.io"]
         
+        let requestSerailizer = AFJSONRequestSerializer()
+        requestSerailizer.requestWithMethod("POST", URLString: URLString, parameters: params, error: nil)
+        requestSerailizer.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
+        print(requestSerailizer)
         
-        let manager = AFHTTPSessionManager()
-        
-        manager.requestSerializer = AFJSONRequestSerializer() as AFJSONRequestSerializer
-        
-        let parmas = [ "longURL" : link ]
+        manager.requestSerializer  = requestSerailizer
+        manager.POST("/url?key={\(key)}",
+                     parameters: params,
+                     progress: nil,
+                     success: { (operation: NSURLSessionDataTask, responseObject: AnyObject?) in
+                        if let responseObject = responseObject as? NSDictionary {
+                            print(responseObject["id"] as! String)
+                        }
+            }, failure: { (operation: NSURLSessionDataTask?, error: NSError) in
+                print("Error while requesting: \(error.localizedDescription)")
+        })
 
-        manager.POST(urlString, parameters: parmas, success: {
-            (task: NSURLSessionDataTask, responseObject: AnyObject?) in
-            print(responseObject!["id"] as! String)
-        }) { (task: NSURLSessionDataTask?, error: NSError) in
-                print("Error while requesting shortened: \(error.localizedDescription)")
-        }
         
-        
-//        let task = session.dataTaskWithURL(url!) {
-//            (data: NSData?, response: NSURLResponse?, error: NSError?) in
-//            
-//            if error != nil {
-//                print(error?.localizedDescription)
-//            } else {
-//                let responseString = NSString(data: data!, encoding: NSASCIIStringEncoding)
-//                let response = responseString as! String
-//                print(response)
-//            }
-//        }
-//        task.resume()
         
         return "SHORT URL"
     }
