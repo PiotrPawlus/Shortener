@@ -9,6 +9,8 @@
 import UIKit
 
 class HttpRequest {
+
+    private let key = "AIzaSyD1WMV_kXlvt4tQSlv0KX3w8x6wlfZ8E_8"
     
     init() { }
 
@@ -30,22 +32,41 @@ class HttpRequest {
     }
     
     private func getShortURL(link: String) -> String? {
-        let urlString: String = "https://to.ly/api.php?longurl=\(link)"
+//        let urlString: String = "https://to.ly/api.php?longurl=\(link)"
+
+        
+        let urlString: String = "https://www.googleapis.com/urlshortener/v1/url?key=\(key)"
         let session = NSURLSession.sharedSession()
         let url = NSURL(string: urlString)
         
-        let task = session.dataTaskWithURL(url!) {
-            (data: NSData?, response: NSURLResponse?, error: NSError?) in
-            
-            if error != nil {
-                print(error?.localizedDescription)
-            } else {
-                let responseString = NSString(data: data!, encoding: NSASCIIStringEncoding)
-                let response = responseString as! String
-                print(response)
-            }
+        
+        
+        let manager = AFHTTPSessionManager()
+        
+        manager.requestSerializer = AFJSONRequestSerializer() as AFJSONRequestSerializer
+        
+        let parmas = [ "longURL" : link ]
+
+        manager.POST(urlString, parameters: parmas, success: {
+            (task: NSURLSessionDataTask, responseObject: AnyObject?) in
+            print(responseObject!["id"] as! String)
+        }) { (task: NSURLSessionDataTask?, error: NSError) in
+                print("Error while requesting shortened: \(error.localizedDescription)")
         }
-        task.resume()
+        
+        
+//        let task = session.dataTaskWithURL(url!) {
+//            (data: NSData?, response: NSURLResponse?, error: NSError?) in
+//            
+//            if error != nil {
+//                print(error?.localizedDescription)
+//            } else {
+//                let responseString = NSString(data: data!, encoding: NSASCIIStringEncoding)
+//                let response = responseString as! String
+//                print(response)
+//            }
+//        }
+//        task.resume()
         
         return "SHORT URL"
     }
