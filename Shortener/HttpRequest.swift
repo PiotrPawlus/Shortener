@@ -32,34 +32,29 @@ class HttpRequest {
     }
     
     private func getShortURL(link: String) -> String? {
+    
+        let url = "https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyD4dnoHm33xMafgjIxqtVTIWdKrWj1ilnw"
+        let manager = AFHTTPSessionManager(baseURL: NSURL(string: url)!)
+        manager.requestSerializer = AFJSONRequestSerializer()
+        manager.responseSerializer = JSONResponseSerializer()
         
-        let URLString: String = "https://www.googleapis.com/urlshortener/v1/url?key=\(key)"
-
-
+        let params = ["longUrl" : "http://whoishiring.io"]
         
-        let URL = URLString.stringByAddingPercentEncodingWithAllowedCharacters( NSCharacterSet.URLQueryAllowedCharacterSet())
-        let manager = AFHTTPSessionManager(sessionConfiguration: NSURLSessionConfiguration.defaultSessionConfiguration())
-        let params = ["longURL" : "http://whoishiring.io"]
-        
-        let requestSerailizer = AFJSONRequestSerializer()
-        requestSerailizer.requestWithMethod("POST", URLString: URLString, parameters: params, error: nil)
-        requestSerailizer.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        print(requestSerailizer)
-        
-        manager.requestSerializer  = requestSerailizer
-        manager.POST("/url?key={\(key)}",
+        manager.POST(url,
                      parameters: params,
                      progress: nil,
-                     success: { (operation: NSURLSessionDataTask, responseObject: AnyObject?) in
-                        if let responseObject = responseObject as? NSDictionary {
-                            print(responseObject["id"] as! String)
+                     success: { (task: NSURLSessionDataTask, responseObject: AnyObject?) in
+                        let response = task.response as! NSHTTPURLResponse
+                        print(response.statusCode)
+                        print("success")
+                     },
+                     failure: { (task: NSURLSessionDataTask?, error: NSError) in
+                        print("Error: \(error.localizedDescription)")
+                        if let data = error.userInfo["data"] as? NSDictionary {
+                            print(data)
                         }
-            }, failure: { (operation: NSURLSessionDataTask?, error: NSError) in
-                print("Error while requesting: \(error.localizedDescription)")
-        })
+                     })
 
-        
         
         return "SHORT URL"
     }
@@ -70,6 +65,27 @@ class HttpRequest {
         let _ = NSPredicate.predicateWithSubstitutionVariables(predicate)
         
         return predicate.evaluateWithObject(link)
+    }
+}
+
+
+
+class JSONResponseSerializer: AFJSONResponseSerializer
+{
+    override func responseObjectForResponse(response: NSURLResponse?, data: NSData?, error: NSErrorPointer) -> AnyObject? {
+        let json = super.responseObjectForResponse(response, data: data, error: error)! as AnyObject
+        
+
+        if ((error.memory) != nil) {
+            let errorValue = error.memory!
+            let userInfo = errorValue.userInfo as NSDictionary
+            let copy = userInfo.mutableCopy() as! NSMutableDictionary
+            
+            copy["data"] = json
+            error.memory = NSError(domain: errorValue.domain, code: errorValue.code, userInfo: copy as [NSObject : AnyObject])
+        }
+        
+        return json
     }
 }
 
