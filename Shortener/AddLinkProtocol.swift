@@ -11,6 +11,5 @@ import CoreData
 
 public protocol AddLinkProtocol {
     var managedObjectContext: NSManagedObjectContext? { get }
-    
     func pushLink(link: String, shortLink: String)
 }

@@ -11,6 +11,5 @@ import CoreData
 
 public protocol FetchLinkProtocol {
     var managedObjectContext: NSManagedObjectContext? { get }
-    
     func fetch()
 }
