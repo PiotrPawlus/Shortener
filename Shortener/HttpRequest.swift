@@ -11,10 +11,13 @@ import UIKit
 class HttpRequest {
 
     private let key = "AIzaSyBHpgQDAJLTHYk8ItTx5bPmlZGPERoy5cQ"
+    private weak var delegate: AddLinkViewController!
     
-    init() { }
+    init(delegate: AddLinkViewController) {
+        self.delegate = delegate
+    }
 
-    func getURL(link: String) -> (URL: String, shortURL: String)? {
+    func getURL(link: String) {
         var url: String
         
         if link.hasPrefix("http://") || link.hasPrefix("https://") {
@@ -23,40 +26,46 @@ class HttpRequest {
             url = "https://\(link.lowercaseString)"
         }
         if verifyURL(url) {
-            guard let shortURL = getShortURL(url) else { return nil }
-            return (url, shortURL)
+            getShortURL(url, completion: { (short, error) in
+                dispatch_async(dispatch_get_main_queue(), {
+                    if error != nil {
+                        print("Error: \(error?.localizedDescription)")
+                    } else {
+                        guard let short = short else { return }
+                        self.delegate?.pushLink(link, shortLink: short)
+                    }
+                })
+            })
         } else {
-            return nil
+            return 
         }
-
     }
     
-    private func getShortURL(link: String) -> String? {
-    
+    func getShortURL(link: String, completion: ((short: String?, error: NSError?) -> Void)) {
         let url = "https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyD4dnoHm33xMafgjIxqtVTIWdKrWj1ilnw"
         let manager = AFHTTPSessionManager(baseURL: NSURL(string: url)!)
         manager.requestSerializer = AFJSONRequestSerializer()
         manager.responseSerializer = JSONResponseSerializer()
         
-        let params = ["longUrl" : "http://whoishiring.io"]
+        let params = ["longUrl" : link]
         
-        manager.POST(url,
-                     parameters: params,
-                     progress: nil,
-                     success: { (task: NSURLSessionDataTask, responseObject: AnyObject?) in
-                        let response = task.response as! NSHTTPURLResponse
-                        print(response.statusCode)
-                        print("success")
-                     },
-                     failure: { (task: NSURLSessionDataTask?, error: NSError) in
-                        print("Error: \(error.localizedDescription)")
-                        if let data = error.userInfo["data"] as? NSDictionary {
-                            print(data)
-                        }
-                     })
-
+        let dataTask = manager.POST(url,
+                                    parameters: params,
+                                    progress: nil,
+                                    success: { (task: NSURLSessionDataTask, responseObject: AnyObject?) in
+                                        if let responseObject = responseObject as? NSDictionary {
+                                            let shortURL = responseObject["id"] as? String
+                                            completion(short: shortURL, error: nil)
+                                        }
+                                    },
+                                    failure: { (task: NSURLSessionDataTask?, error: NSError) in
+                                        if let data = error.userInfo["data"] as? NSDictionary {
+                                            print(data)
+                                            completion(short: nil, error: error)
+                                        }
+                                    })!
         
-        return "SHORT URL"
+        dataTask.resume()
     }
     
     private func verifyURL(link: String) -> Bool {
@@ -67,8 +76,6 @@ class HttpRequest {
         return predicate.evaluateWithObject(link)
     }
 }
-
-
 
 class JSONResponseSerializer: AFJSONResponseSerializer
 {

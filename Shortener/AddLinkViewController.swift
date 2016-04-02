@@ -40,10 +40,9 @@ class AddLinkViewController: UIViewController, AddLinkProtocol {
     @IBAction func addLink(sender: AnyObject) {
         guard let link = linkTextField.text else { return }
         
-        httpRequest = HttpRequest()
-        guard let (URL, shortURL) = httpRequest.getURL(link) else { return }
+        httpRequest = HttpRequest(delegate: self)
+        httpRequest.getURL(link)
         
-        pushLink(URL, shortLink: shortURL)
     }
 
     func pushLink(link: String, shortLink: String) {
