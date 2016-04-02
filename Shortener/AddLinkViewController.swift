@@ -23,7 +23,7 @@ class AddLinkViewController: UIViewController, AddLinkProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Shorten a link"
+        title = "Shorten link"
         if self.revealViewController() != nil {
             menuBarButton.target = self.revealViewController()
             menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))

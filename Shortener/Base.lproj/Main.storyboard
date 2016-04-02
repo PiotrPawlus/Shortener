@@ -68,7 +68,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8As-s1-ctY">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="PG5-Vr-LMx"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="PG5-Vr-LMx"/>
                     </navigationItem>
                     <connections>
                         <outlet property="linkTextField" destination="5m5-l5-YS8" id="wyC-is-Eyp"/>
@@ -92,7 +92,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="68"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y7S-3e-GSx" id="7gv-vK-a9X">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="67.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fD3-oq-vxn">
@@ -139,7 +139,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Fbe-V8-ANO">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Yt8-S4-Vek"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="Yt8-S4-Vek"/>
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="Yt8-S4-Vek" id="oRJ-Oe-Cb3"/>
@@ -167,7 +167,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Add Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lfO-EL-REI">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Shorten link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lfO-EL-REI">
                                                     <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -187,7 +187,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Yours Links" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nA1-JL-csL">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Links" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nA1-JL-csL">
                                                     <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -250,6 +250,9 @@
             <point key="canvasLocation" x="1270" y="459"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu" width="22" height="22"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="JIB-hd-tcy"/>
     </inferredMetricsTieBreakers>
