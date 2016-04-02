@@ -63,15 +63,15 @@ class LinksTableViewController: UITableViewController, FetchLinkProtocol {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return httpAddresses.count
     }
-    
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCellWithIdentifier("LinksCell") else { return UITableViewCell() }
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("LinksCell") as! LinksCell
+
         let end = httpAddresses.count - indexPath.row - 1
         let addres = httpAddresses[end]
-        cell.textLabel!.text = addres.httpAddress
-        cell.detailTextLabel!.text = addres.shortHttpAddress
-        
+        cell.urlTextView!.text = addres.httpAddress
+        cell.shortUrlTextView!.text = addres.shortHttpAddress
+
         return cell
     }
 }
