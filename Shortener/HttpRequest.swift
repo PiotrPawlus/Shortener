@@ -39,7 +39,8 @@ class HttpRequest {
     }
 
     private func getShortURL(link: String, completion: ((short: String?) -> Void)) {
-        let url = "https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyD4dnoHm33xMafgjIxqtVTIWdKrWj1ilnw"
+        let key = ""
+        let url = "https://www.googleapis.com/urlshortener/v1/url?key=\(key)"
         let params = ["longUrl": link]
 
         let manager = AFHTTPSessionManager(baseURL: NSURL(string: url)!)
