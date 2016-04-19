@@ -30,17 +30,107 @@ class ShortenerUITests: XCTestCase {
 
     func testAddLink() {
         let app = XCUIApplication()
-        let linkTextField = app.textFields["Add New Link"]
-        linkTextField.tap()
-        XCTAssert(linkTextField.exists, "LinkTextField don't exist")
-        linkTextField.typeText("https://github.com/PiotrPawlus")
+        let addNewLinkTextField = app.textFields["Add New Link"]
+        XCTAssert(addNewLinkTextField.exists, "addNewLinkTextField doesn't exist")
+
+        addNewLinkTextField.tap()
+        addNewLinkTextField.typeText("www.github.com")
+        XCTAssertEqual(addNewLinkTextField.value as? String, "www.github.com", "addNewLinkTextField value is not correct")
+
         let addButton = app.buttons["+"]
+        XCTAssert(addButton.exists, "addButton doesn't exist")
         addButton.tap()
-        
+
         let menuButton = app.navigationBars["Shorten link"].buttons["menu"]
+        XCTAssert(menuButton.exists, "menuButton doesn't exist")
         menuButton.tap()
-        let table = app.tables
-        table.staticTexts["Links"].tap()
+
+        let tableQuery = app.tables
+        let links = tableQuery.staticTexts["Links"]
+        XCTAssert(links.exists, "Links in menu table doesn't exist")
+        links.tap()
+    }
+
+    func testCountOfCellsAfterAddingLink() {
+        let app = XCUIApplication()
+
+        let menuButtonInShorten = app.navigationBars["Shorten link"].buttons["menu"]
+        XCTAssert(menuButtonInShorten.exists, "menuButtonInShorten doesn't exist")
+        menuButtonInShorten.tap()
+
+        let tableQuery = app.tables
+        let links = tableQuery.staticTexts["Links"]
+        XCTAssert(links.exists, "Links in menu table doesn't exist")
+        links.tap()
+
+        let countCells = app.tables.cells.count
+
+        let menuButtonInLinks = app.navigationBars["Links"].buttons["menu"]
+        XCTAssert(menuButtonInLinks.exists, "menuButtonInLinks doesn't exist")
+        menuButtonInLinks.tap()
+
+        let shortenLink = tableQuery.staticTexts["Shorten link"]
+        XCTAssert(shortenLink.exists, "shortenLink in menu table doesn't exist")
+        shortenLink.tap()
+
+        let addNewLinkTextField = app.textFields["Add New Link"]
+        XCTAssert(addNewLinkTextField.exists, "addNewLinkTextField doesn't exist")
+
+        addNewLinkTextField.tap()
+        let link = "www.apple.com"
+        addNewLinkTextField.typeText(link)
+        XCTAssertEqual(addNewLinkTextField.value as? String, link, "addNewLinkTextField value is not correct")
+
+        let addButton = app.buttons["+"]
+        XCTAssert(addButton.exists, "addButton doesn't exist")
+        addButton.tap()
+
+        menuButtonInShorten.tap()
+        links.tap()
+        let countNewCells = app.tables.cells.count - UInt(1)
+
+        XCTAssert(countCells == countNewCells , "Doesn't add new link.")
+    }
+
+    func testShouldNotAddLink() {
+        let app = XCUIApplication()
+
+        let menuButtonInShorten = app.navigationBars["Shorten link"].buttons["menu"]
+        XCTAssert(menuButtonInShorten.exists, "menuButtonInShorten doesn't exist")
+        menuButtonInShorten.tap()
+
+        let tableQuery = app.tables
+        let links = tableQuery.staticTexts["Links"]
+        XCTAssert(links.exists, "Links in menu table doesn't exist")
+        links.tap()
+
+        let countCells = app.tables.cells.count
+
+        let menuButtonInLinks = app.navigationBars["Links"].buttons["menu"]
+        XCTAssert(menuButtonInLinks.exists, "menuButtonInLinks doesn't exist")
+        menuButtonInLinks.tap()
+
+        let shortenLink = tableQuery.staticTexts["Shorten link"]
+        XCTAssert(shortenLink.exists, "shortenLink in menu table doesn't exist")
+        shortenLink.tap()
+
+        let addNewLinkTextField = app.textFields["Add New Link"]
+        XCTAssert(addNewLinkTextField.exists, "addNewLinkTextField doesn't exist")
+
+        addNewLinkTextField.tap()
+        let link = "Apple"
+        addNewLinkTextField.typeText(link)
+        XCTAssertEqual(addNewLinkTextField.value as? String, link, "addNewLinkTextField value is not correct")
+
+        let addButton = app.buttons["+"]
+        XCTAssert(addButton.exists, "addButton doesn't exist")
+        addButton.tap()
+
+        menuButtonInShorten.tap()
+        links.tap()
+        let countNewCells = app.tables.cells.count
+
+        XCTAssert(countCells == countNewCells , "Add new link.")
     }
 
 }
