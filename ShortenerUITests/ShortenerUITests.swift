@@ -28,9 +28,19 @@ class ShortenerUITests: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testAddLink() {
+        let app = XCUIApplication()
+        let linkTextField = app.textFields["Add New Link"]
+        linkTextField.tap()
+        XCTAssert(linkTextField.exists, "LinkTextField don't exist")
+        linkTextField.typeText("https://github.com/PiotrPawlus")
+        let addButton = app.buttons["+"]
+        addButton.tap()
+        
+        let menuButton = app.navigationBars["Shorten link"].buttons["menu"]
+        menuButton.tap()
+        let table = app.tables
+        table.staticTexts["Links"].tap()
     }
 
 }

@@ -39,7 +39,7 @@ class HttpRequest {
     }
 
     private func getShortURL(link: String, completion: ((short: String?) -> Void)) {
-        let key = ""
+        let key = "AIzaSyCk-7xkckJaHIOMUtHohcF-fdVE9EA0Kns"
         let url = "https://www.googleapis.com/urlshortener/v1/url?key=\(key)"
         let params = ["longUrl": link]
 
