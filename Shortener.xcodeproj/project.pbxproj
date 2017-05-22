@@ -15,7 +15,6 @@
 		C10DCB231CAD404500C9B0C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C10DCB221CAD404500C9B0C4 /* Assets.xcassets */; };
 		C10DCB261CAD404500C9B0C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10DCB241CAD404500C9B0C4 /* LaunchScreen.storyboard */; };
 		C10DCB311CAD404500C9B0C4 /* ShortenerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB301CAD404500C9B0C4 /* ShortenerTests.swift */; };
-		C10DCB3C1CAD404500C9B0C4 /* ShortenerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB3B1CAD404500C9B0C4 /* ShortenerUITests.swift */; };
 		C10DCB4D1CAD423500C9B0C4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB4C1CAD423500C9B0C4 /* SWRevealViewController.m */; };
 		C10DCB4F1CAD468B00C9B0C4 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB4E1CAD468B00C9B0C4 /* MenuTableViewController.swift */; };
 		C10DCB511CAD46BE00C9B0C4 /* LinksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB501CAD46BE00C9B0C4 /* LinksTableViewController.swift */; };
@@ -24,19 +23,11 @@
 		C10DCB591CAD4AD300C9B0C4 /* FetchLinksProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB581CAD4AD300C9B0C4 /* FetchLinksProtocol.swift */; };
 		C10DCB681CAD5B3B00C9B0C4 /* HTTPAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB671CAD5B3B00C9B0C4 /* HTTPAddress.swift */; };
 		C10DCB6A1CAD7D9A00C9B0C4 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10DCB691CAD7D9A00C9B0C4 /* HttpRequest.swift */; };
-		C1A12B241CAE3EA3005C954B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A12B231CAE3EA3005C954B /* Default-568h@2x.png */; };
 		C1A12B271CAFEE70005C954B /* LinksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A12B261CAFEE70005C954B /* LinksCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		C10DCB2D1CAD404500C9B0C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C10DCB0D1CAD404500C9B0C4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C10DCB141CAD404500C9B0C4;
-			remoteInfo = Shortener;
-		};
-		C10DCB381CAD404500C9B0C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C10DCB0D1CAD404500C9B0C4 /* Project object */;
 			proxyType = 1;
@@ -60,9 +51,6 @@
 		C10DCB2C1CAD404500C9B0C4 /* ShortenerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShortenerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C10DCB301CAD404500C9B0C4 /* ShortenerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortenerTests.swift; sourceTree = "<group>"; };
 		C10DCB321CAD404500C9B0C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C10DCB371CAD404500C9B0C4 /* ShortenerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShortenerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C10DCB3B1CAD404500C9B0C4 /* ShortenerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortenerUITests.swift; sourceTree = "<group>"; };
-		C10DCB3D1CAD404500C9B0C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C10DCB4A1CAD423400C9B0C4 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		C10DCB4B1CAD423500C9B0C4 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		C10DCB4C1CAD423500C9B0C4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -73,7 +61,6 @@
 		C10DCB581CAD4AD300C9B0C4 /* FetchLinksProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchLinksProtocol.swift; sourceTree = "<group>"; };
 		C10DCB671CAD5B3B00C9B0C4 /* HTTPAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPAddress.swift; sourceTree = "<group>"; };
 		C10DCB691CAD7D9A00C9B0C4 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
-		C1A12B231CAE3EA3005C954B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C1A12B261CAFEE70005C954B /* LinksCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksCell.swift; sourceTree = "<group>"; };
 		F05FCD019E88F5B4CE51682F /* Pods_Shortener.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shortener.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2373AC6AEFFE394699A59B2 /* Pods-Shortener.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shortener.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shortener/Pods-Shortener.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,13 +83,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C10DCB341CAD404500C9B0C4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -118,10 +98,8 @@
 		C10DCB0C1CAD404500C9B0C4 = {
 			isa = PBXGroup;
 			children = (
-				C1A12B231CAE3EA3005C954B /* Default-568h@2x.png */,
 				C10DCB171CAD404500C9B0C4 /* Shortener */,
 				C10DCB2F1CAD404500C9B0C4 /* ShortenerTests */,
-				C10DCB3A1CAD404500C9B0C4 /* ShortenerUITests */,
 				C10DCB161CAD404500C9B0C4 /* Products */,
 				CFFE445B9EBF4239A5AE5BB6 /* Pods */,
 				9FA90B81FD2FC44997766AFD /* Frameworks */,
@@ -133,7 +111,6 @@
 			children = (
 				C10DCB151CAD404500C9B0C4 /* Shortener.app */,
 				C10DCB2C1CAD404500C9B0C4 /* ShortenerTests.xctest */,
-				C10DCB371CAD404500C9B0C4 /* ShortenerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,15 +141,6 @@
 				C10DCB321CAD404500C9B0C4 /* Info.plist */,
 			);
 			path = ShortenerTests;
-			sourceTree = "<group>";
-		};
-		C10DCB3A1CAD404500C9B0C4 /* ShortenerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C10DCB3B1CAD404500C9B0C4 /* ShortenerUITests.swift */,
-				C10DCB3D1CAD404500C9B0C4 /* Info.plist */,
-			);
-			path = ShortenerUITests;
 			sourceTree = "<group>";
 		};
 		C10DCB491CAD420C00C9B0C4 /* SWRevealController */ = {
@@ -277,24 +245,6 @@
 			productReference = C10DCB2C1CAD404500C9B0C4 /* ShortenerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C10DCB361CAD404500C9B0C4 /* ShortenerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C10DCB461CAD404500C9B0C4 /* Build configuration list for PBXNativeTarget "ShortenerUITests" */;
-			buildPhases = (
-				C10DCB331CAD404500C9B0C4 /* Sources */,
-				C10DCB341CAD404500C9B0C4 /* Frameworks */,
-				C10DCB351CAD404500C9B0C4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C10DCB391CAD404500C9B0C4 /* PBXTargetDependency */,
-			);
-			name = ShortenerUITests;
-			productName = ShortenerUITests;
-			productReference = C10DCB371CAD404500C9B0C4 /* ShortenerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -310,11 +260,6 @@
 						LastSwiftMigration = 0830;
 					};
 					C10DCB2B1CAD404500C9B0C4 = {
-						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0830;
-						TestTargetID = C10DCB141CAD404500C9B0C4;
-					};
-					C10DCB361CAD404500C9B0C4 = {
 						CreatedOnToolsVersion = 7.3;
 						LastSwiftMigration = 0830;
 						TestTargetID = C10DCB141CAD404500C9B0C4;
@@ -336,7 +281,6 @@
 			targets = (
 				C10DCB141CAD404500C9B0C4 /* Shortener */,
 				C10DCB2B1CAD404500C9B0C4 /* ShortenerTests */,
-				C10DCB361CAD404500C9B0C4 /* ShortenerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -347,20 +291,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C10DCB261CAD404500C9B0C4 /* LaunchScreen.storyboard in Resources */,
-				C1A12B241CAE3EA3005C954B /* Default-568h@2x.png in Resources */,
 				C10DCB231CAD404500C9B0C4 /* Assets.xcassets in Resources */,
 				C10DCB1E1CAD404500C9B0C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C10DCB2A1CAD404500C9B0C4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C10DCB351CAD404500C9B0C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -517,14 +453,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C10DCB331CAD404500C9B0C4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C10DCB3C1CAD404500C9B0C4 /* ShortenerUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -532,11 +460,6 @@
 			isa = PBXTargetDependency;
 			target = C10DCB141CAD404500C9B0C4 /* Shortener */;
 			targetProxy = C10DCB2D1CAD404500C9B0C4 /* PBXContainerItemProxy */;
-		};
-		C10DCB391CAD404500C9B0C4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C10DCB141CAD404500C9B0C4 /* Shortener */;
-			targetProxy = C10DCB381CAD404500C9B0C4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -702,30 +625,6 @@
 			};
 			name = Release;
 		};
-		C10DCB471CAD404500C9B0C4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ShortenerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = piotr.pawlus.ShortenerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Shortener;
-			};
-			name = Debug;
-		};
-		C10DCB481CAD404500C9B0C4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ShortenerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = piotr.pawlus.ShortenerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Shortener;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -752,15 +651,6 @@
 			buildConfigurations = (
 				C10DCB441CAD404500C9B0C4 /* Debug */,
 				C10DCB451CAD404500C9B0C4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C10DCB461CAD404500C9B0C4 /* Build configuration list for PBXNativeTarget "ShortenerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C10DCB471CAD404500C9B0C4 /* Debug */,
-				C10DCB481CAD404500C9B0C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -77,7 +77,7 @@ class HttpRequest {
 
 class JSONResponseSerializer: AFJSONResponseSerializer {
 
-    override func responseObject(for response: URLResponse?, data: Data?, error: NSErrorPointer) -> AnyObject? {
+    override func responseObject(for response: URLResponse?, data: Data?, error: NSErrorPointer) -> Any? {
         let json = super.responseObject(for: response, data: data, error: error)! as AnyObject
         if error?.pointee != nil {
             let errorValue = error?.pointee!
