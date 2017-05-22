@@ -37,7 +37,7 @@ class AddLinkViewController: UIViewController, AddLinkProtocol {
     
 
     
-    @IBAction func addLink(sender: AnyObject) {
+    @IBAction func addLink(_ sender: AnyObject) {
         guard let link = linkTextField.text else { return }
         
         httpRequest = HttpRequest(delegate: self)
@@ -45,12 +45,12 @@ class AddLinkViewController: UIViewController, AddLinkProtocol {
         
     }
 
-    func pushLink(link: String, shortLink: String) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    func pushLink(_ link: String, shortLink: String) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         managedObjectContext = appDelegate.managedObjectContext
         
-        let entity = NSEntityDescription.entityForName("HTTPAddress", inManagedObjectContext: managedObjectContext!)!
-        let address = HTTPAddress(entity: entity, insertIntoManagedObjectContext: managedObjectContext!)
+        let entity = NSEntityDescription.entity(forEntityName: "HTTPAddress", in: managedObjectContext!)!
+        let address = HTTPAddress(entity: entity, insertInto: managedObjectContext!)
         
         address.httpAddress = link
         address.shortHttpAddress = shortLink

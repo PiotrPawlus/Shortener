@@ -17,7 +17,7 @@ class LinksTableViewController: UITableViewController, FetchLinkProtocol {
     
     var httpAddresses = [HTTPAddress]()
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.fetch()
@@ -41,13 +41,13 @@ class LinksTableViewController: UITableViewController, FetchLinkProtocol {
     }
     
     func fetch() {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         managedObjectContext = appDelegate.managedObjectContext
         
-        let fetchRequest = NSFetchRequest(entityName: "HTTPAddress")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "HTTPAddress")
         
         do {
-            let fetchResult = try managedObjectContext?.executeFetchRequest(fetchRequest)
+            let fetchResult = try managedObjectContext?.fetch(fetchRequest)
             httpAddresses = fetchResult as! [HTTPAddress]
         } catch let err as NSError {
             print("Could not fetch \(err), \(err.userInfo)")
@@ -56,16 +56,16 @@ class LinksTableViewController: UITableViewController, FetchLinkProtocol {
 
 
     // MARK: - Table view data source
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return httpAddresses.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("LinksCell") as! LinksCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LinksCell") as! LinksCell
 
         let end = httpAddresses.count - indexPath.row - 1
         let addres = httpAddresses[end]

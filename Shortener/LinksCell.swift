@@ -16,11 +16,11 @@ class LinksCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        urlTextView.editable = false
-        shortUrlTextView.editable = false
+        urlTextView.isEditable = false
+        shortUrlTextView.isEditable = false
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
